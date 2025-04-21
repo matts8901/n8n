@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: n8n
+    env: node
+    repo: https://github.com/matts8901/n8n
+    branch: main
+    buildCommand: pnpm build
+    startCommand: pnpm start
+    rootDir: packages/cli
+    envVars:
+      - key: NODE_VERSION
+        value: 20.11.1
+      - key: N8N_BASIC_AUTH_ACTIVE
+        value: "true"
+      - key: N8N_BASIC_AUTH_USER
+        value: "admin"
+      - key: N8N_BASIC_AUTH_PASSWORD
+        value: "Kaioken_20"
